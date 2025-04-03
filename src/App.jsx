@@ -3,6 +3,7 @@ import {
   AboutUs,
   AppLayout,
   Contact,
+  Error,
   Home,
   Package,
   SingleBlog,
@@ -12,6 +13,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <AppLayout />,
+    errorElement: <Error />,
     children: [
       {
         index: true,
