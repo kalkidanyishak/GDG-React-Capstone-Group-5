@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import Button from "../components/Button";
+import { Button } from "../components";
 
 const AppLayout = () => {
   return (
