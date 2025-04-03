@@ -1,4 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
+import Button from "../components/Button";
 
 const AppLayout = () => {
   return (
@@ -10,6 +11,7 @@ const AppLayout = () => {
         <Link to="contact">Contact</Link>
         <Link to="package">Package</Link>
       </nav>
+      <Button>Subscribe</Button>
       <Outlet />
     </>
   );
