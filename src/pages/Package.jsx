@@ -1,4 +1,4 @@
-import packageHero from "../assets/package-hero-bg.png";
+import packageHero from "../assets/images/package-hero-bg.png";
 import { Hero } from "../components";
 import { Link } from "react-router-dom";
 

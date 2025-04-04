@@ -1,4 +1,4 @@
-import subscribe from "../assets/bg-subscribe.png";
+import subscribe from "../assets/images/bg-subscribe.png";
 import Button from "./Button";
 
 const Subscribe = () => {

@@ -2,14 +2,14 @@ import { CiSearch } from "react-icons/ci";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import NavLinks from "./NavLinks";
-import navLogo from "../assets/logo.png";
+import navLogo from "../assets/images/logo.png";
 import Search from "./Search";
 
 const Navbar = () => {
   return (
     <>
       <div className="relative">
-        <nav className="bg-black opacity-51 fixed w-screen">
+        <nav className="glass fixed w-screen">
           <div className="navbar align-element">
             <div className="navbar-start">
               {/* LOGO */}
@@ -22,7 +22,7 @@ const Navbar = () => {
               </NavLink>
               {/* DROPDOWN */}
               <div className="dropdown">
-                <label tabIndex={0} className="btn lg:hidden">
+                <label tabIndex={0} className="btn btn-ghost lg:hidden">
                   <FaBarsStaggered className="h-6 w-6" />
                 </label>
                 <ul
