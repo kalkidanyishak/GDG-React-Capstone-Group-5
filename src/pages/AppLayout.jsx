@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import { Button } from "../components";
+import { Button, Footer } from "../components";
 import Navbar from "../components/Navbar";
 
 const AppLayout = () => {
@@ -14,6 +14,7 @@ const AppLayout = () => {
       </nav> */}
       <Navbar />
       <Outlet />
+      <Footer/>
     </>
   );
 };
