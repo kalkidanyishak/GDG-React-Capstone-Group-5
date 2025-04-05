@@ -13,7 +13,7 @@ const TourPartner = () => {
         There are many variation of passage of lorem ipsum available but the
         majority have suffered alteration
       </p>
-      <div className="flex space-x-24">
+      <div className="mt-4 flex space-x-8 flex-wrap justify-center items-center space-y-8 lg:space-x-24 md:space-x-16 md:space-y-0">
         <img src={katana} className="w-24" alt="" />
         <img src={travava} className="w-24" alt="" />
         <img src={bigui} className="w-24" alt="" />

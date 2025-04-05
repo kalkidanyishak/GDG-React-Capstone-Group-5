@@ -2,7 +2,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const WhyUsCard = ({ icon, cardTitle, text }) => {
   return (
-    <div className="card card-border bg-base-100 w-[330px] shadow-2xl">
+    <div className="card card-border bg-base-100 md:w-xs shadow-2xl">
       <div className="card-body space-y-4">
         <img src={icon} alt="best-service" className="w-16 h-16" />
         <h2 className="card-title font-bold">{cardTitle}</h2>

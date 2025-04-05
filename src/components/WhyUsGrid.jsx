@@ -26,8 +26,8 @@ const cardData = [
 
 const WhyUsGrid = () => {
   return (
-    <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-screen flex justify-center">
-      <div className="grid lg:grid-cols-3 grid-cols-1 space-y-4 lg:space-y-0 lg:space-x-8">
+    <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[90%] flex justify-center">
+      <div className="hidden md:grid md:grid-cols-3 space-y-4 lg:space-y-0 lg:space-x-8">
         {cardData.map((item) => {
           const { id, icon, text, cardTitle } = item;
           return (

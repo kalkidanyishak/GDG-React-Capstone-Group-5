@@ -1,6 +1,8 @@
-import { Button, Hero, WhyUs } from "../components";
+import { Button, Explore, Hero, WhyUs } from "../components";
 import heroImg from "../assets/images/home-hero-bg.png";
 import TourPartner from "../components/TourPartner";
+import TravelCarousel from "../components/TravelCarousel";
+import TestimonialCarousel from "../components/TestimonialCarousel";
 
 const Home = () => {
   return (
@@ -32,8 +34,10 @@ const Home = () => {
           </p>
         </div>
       </Hero>
+      <TravelCarousel />
       <WhyUs />
       <TourPartner />
+      <TestimonialCarousel/>
     </>
   );
 };
