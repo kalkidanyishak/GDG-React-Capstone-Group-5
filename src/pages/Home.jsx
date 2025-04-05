@@ -1,6 +1,6 @@
 import { Button, Hero, WhyUs } from "../components";
 import heroImg from "../assets/images/home-hero-bg.png";
-import TourPartner from "../components";
+import TourPartner from "../components/TourPartner";
 
 const Home = () => {
   return (
@@ -32,6 +32,7 @@ const Home = () => {
           </p>
         </div>
       </Hero>
+      <WhyUs />
       <TourPartner />
     </>
   );
