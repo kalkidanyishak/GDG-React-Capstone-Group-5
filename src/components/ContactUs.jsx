@@ -42,9 +42,9 @@ const ContactUs = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.
           </p>
 
-          <div className="grid sm:grid-cols-2 gap-8">
+          <div className="grid  sm:grid-cols-2 gap-8">
             {[...Array(4)].map((_, i) => (
-              <div key={i}>
+              <div key={i} className='space-y-2'>
                 <h3 className="text-[20px] sm:text-[22px] lg:text-[24px] font-semibold mb-1">
                   Lhokseumawe, Aceh
                 </h3>
