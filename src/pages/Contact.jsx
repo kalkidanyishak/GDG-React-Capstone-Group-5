@@ -1,6 +1,7 @@
 import contactHero from "../assets/contact-hero-bg.png";
 import { Hero } from "../components";
 import { Link } from "react-router-dom";
+import ContactUs from "../components/ContactUs";
 
 const Contact = () => {
   return (
@@ -18,6 +19,7 @@ const Contact = () => {
           </ul>
         </div>
       </Hero>
+        <ContactUs/>
     </div>
   );
 };
