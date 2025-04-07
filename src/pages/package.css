@@ -29,6 +29,7 @@
   font-size: 14px;
   margin-left: 5rem;
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -96,57 +97,33 @@
 }
 
 .box {
-  display: flex;
-  flex-direction: column;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-column-gap: 2.5rem;
+  margin: 1rem;
 }
-
-.tips__card {
-  display: flex;
-}
-.tip__card {
+.stories {
+  grid-row: span 2;
+  margin-right: 4rem;
   box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.2);
-  padding: 20px;
-  border-radius: 0.5rem;
+  height: fit-content;
+
 }
-.topic {
-  font-size: 16px;
-  font-weight: 500;
+.perfect,
+.Tips {
+  box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+  margin-left: 4rem;
+  padding: 30px;
 }
 
-.tip__description {
-  font-size: 20px;
-  font-weight: 600;
-  width: 21.5ch;
-}
-.gap {
-  padding: 40px;
-  margin: 20px;
-}
-.tip__image {
-  width: fit-content;
-  border-radius: 8px;
-  object-fit: cover;
-}
-.read_btn{
-  height: 2rem;
-  width: 7rem;
+.tips_btn {
   background-color: black;
   color: white;
-  border-radius: 1rem;
+  width: 7.2rem;
+  height: 2.5rem;
+  border-radius: 1.5rem;
   font-size: 14px;
-  margin-top: 1rem;
-}
-.first_column{
-  display: flex;
-  flex-direction: column;
-  line-height: 25px;
-}
-.first_column button{
-  margin-top: 3rem;
-}
-.second_column {
-  line-height: 25px;
-  margin-top: 1rem;
+  margin: 10px;
+  cursor: pointer;
 }
