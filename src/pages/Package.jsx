@@ -2,85 +2,53 @@ import packageHero from "../assets/package-hero-bg.png";
 import { Hero } from "../components";
 import { Link } from "react-router-dom";
 import "./package.css";
+import { useEffect, useState } from "react";
 
-const packages = [
+const img = [
   {
     image: "images/image2.png",
-    country: "Paris",
-    price: "$299.00/2days",
-    discription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium repudiandae perspiciatis sequi sed? Voluptatum ab nulla dolor quibusdam modi. A enim velit voluptatem dolore,.",
   },
   {
     image: "images/image3.png",
-    country: "Swiss",
-    price: "$299.00/2days",
-    discription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium repudiandae perspiciatis sequi sed? Voluptatum ab nulla dolor quibusdam modi. A enim velit voluptatem dolore,.",
   },
   {
     image: "images/image4.png",
-    country: "Thailand",
-    price: "$299.00/2days",
-    discription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium repudiandae perspiciatis sequi sed? Voluptatum ab nulla dolor quibusdam modi. A enim velit voluptatem dolore,.",
   },
   {
     image: "images/image5.png",
-    country: "Taiwan",
-    price: "$299.00/2days",
-    discription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium repudiandae perspiciatis sequi sed? Voluptatum ab nulla dolor quibusdam modi. A enim velit voluptatem dolore,.",
   },
   {
     image: "images/image6.png",
-    country: "Indonesi",
-    price: "$299.00/2days",
-    discription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium repudiandae perspiciatis sequi sed? Voluptatum ab nulla dolor quibusdam modi. A enim velit voluptatem dolore,.",
   },
   {
     image: "images/image7.png",
-    country: "Singapore",
-    price: "$299.00/2day",
-    discription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium repudiandae perspiciatis sequi sed? Voluptatum ab nulla dolor quibusdam modi. A enim velit voluptatem dolore,.",
   },
 ];
-
-const Tips = [
-  {
-    discribe: "Perfect ",
-    header: "9 Popular Travel Destintion on Sale in 2022 -",
-    message:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  sit amet consectetur adipisicing elit",
-  },
-  {
-    img: "images/image9.png",
-    discribe: "Stories",
-    header: "Travel Stories For Now and the Future  -",
-    message:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  sit amet consectetur adipisicing elit",
-  },
-  {
-    discribe: "Tips",
-    header: "How Are We Going to Travel in 2022 -",
-    message:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore  sit amet consectetur adipisicing elit",
-  },
-];
-
 const Package = () => {
-  const firstColumnTips = Tips.filter(
-    (tip) => tip.discribe.includes("Perfect") || tip.discribe.includes("Tips")
-  );
+  const [packages, setPackages] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const secondColumnTips = Tips.filter(
-    (tip) =>
-      tip.discribe.includes("Stories") &&
-      !tip.discribe.includes("Perfect") &&
-      !tip.discribe.includes("Tips")
-  );
+  useEffect(() => {
+    const fetched = async () => {
+      try {
+        const response = await fetch(
+          "https://67eadc5834bcedd95f64c9f3.mockapi.io/RebelRover/Destinations"
+        );
+        if (!response.ok) {
+          throw new Error("network response was not ok");
+        }
+        const json = await response.json();
+        setPackages(json);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetched();
+  }, []);
 
   return (
     <div>
@@ -104,15 +72,15 @@ const Package = () => {
           <p className="para">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
             vitae tempore iusto dolore corporis maxime vel quia aut laboriosam
-            vero.{" "}
+            vero.
           </p>
 
           <button className="btn">Discover More</button>
         </div>
         <div className="container">
           <div className="packages__card">
-            {packages.map((item, i) => (
-              <Lists key={i} item={item} />
+            {packages.slice(0, 6).map((item, i) => (
+              <Lists key={item.i || i} item={item} image={img[i].image} />
             ))}
           </div>
         </div>
@@ -128,23 +96,117 @@ const Package = () => {
             vitae tempore iusto dolore corporis maxime vel quia aut laboriosam
             vero.
           </p>
-          <button className="btn">View More</button>
+          <button className="tips_btn">View More</button>
         </div>
         <div className="box">
-          <div className="tips__card">
-            <div
-              className="first_column"
-              style={{ flex: 1, paddingRight: "20px" }}
+          <div className="perfect">
+            <p
+              style={{
+                fontSize: "18px",
+                marginLeft: "1rem",
+                marginTop: "1rem",
+                fontWeight: "400",
+              }}
             >
-              {firstColumnTips.map((list, i) => (
-                <TipsList key={i} list={list} />
-              ))}
-            </div>
-            <div className="second_column">
-              {secondColumnTips.map((list, i) => (
-                <TipsList key={i} list={list} />
-              ))}
-            </div>
+              Perfect | Tips
+            </p>
+            <h3
+              style={{
+                fontSize: "25px",
+                marginLeft: "1.2rem",
+                width: "21.5ch",
+                fontWeight: "600",
+              }}
+            >
+              9 Popular Travel Destintion on Sale in 2022 -
+            </h3>
+            <p
+              style={{
+                fontSize: "14px",
+                margin: "1.2rem",
+                marginBottom: "4rem",
+                fontWeight: "300",
+              }}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna
+            </p>
+            <button className="tips_btn">Read more</button>
+          </div>
+          <div className=" stories">
+            <img
+              src="images/image9.png"
+              alt=""
+              style={{ width: "50rem", height: "33rem", objectFit: "cover" }}
+            />
+            <p
+              style={{
+                fontSize: "18px",
+                marginTop: "1rem",
+                marginLeft: "1rem",
+                fontWeight: "400",
+              }}
+            >
+              Strories | Tips
+            </p>
+            <h3
+              style={{
+                fontSize: "20px",
+                marginLeft: "1rem",
+                width: "21.5ch",
+                fontWeight: "600",
+              }}
+            >
+              How Are We Going to Travel in 2022 -
+            </h3>
+            <p
+              style={{
+                fontSize: "14px",
+                margin: "1.2rem",
+                marginBottom: "2.5rem",
+                fontWeight: "300",
+              }}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna
+            </p>
+            <button className="tips_btn" style={{ marginBottom: "2.5rem" }}>
+              Read more
+            </button>
+          </div>
+          <div className="Tips">
+            <p
+              style={{
+                fontSize: "18px",
+                marginTop: "1rem",
+                marginLeft: "1rem",
+                fontWeight: "400",
+              }}
+            >
+              Tips | Travel
+            </p>
+            <h3
+              style={{
+                fontSize: "25px",
+                marginLeft: "1.2rem",
+                width: "15.5rem",
+                fontWeight: "600",
+              }}
+            >
+              How Are We Going to Travel in 2022 -
+            </h3>
+            <p
+              style={{
+                fontSize: "14px",
+                margin: "1.2rem",
+                marginBottom: "4rem",
+                fontWeight: "300",
+              }}
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna
+            </p>
+            <button className="tips_btn">Read more</button>
           </div>
         </div>
       </div>
@@ -152,49 +214,31 @@ const Package = () => {
   );
 };
 
-function Lists({ item }) {
+function Lists({ item, image }) {
   return (
     <div className="package__card">
       <div>
-        <img src={item.image} alt="" className="packages__image" />
+        <img src={image} alt={item.country} className="packages__image" />
       </div>
 
       <div>
         <div className="country__price">
-          <p style={{ fontWeight: "bold", fontSize: "20px" }}>
-            {item.country}
-          </p>
+          <p style={{ fontWeight: "bold", fontSize: "20px" }}>{item.country}</p>
           <strong>
             <p>{item.price} </p>
           </strong>
         </div>
 
-        <div className="message">{item.discription}</div>
+        <div className="message">{item.description}</div>
       </div>
       <div className="booking__rating">
         <div className="stars">
-          {Array.from({ length: 5 }, ( _, i) => (
+          {Array.from({ length: 5 }, (_, i) => (
             <img className="star-icon" src="images/one-star-icon.svg" />
           ))}
         </div>
         <button className="booking__btn">Booking Now</button>
       </div>
-    </div>
-  );
-}
-
-function TipsList({ list }) {
-  const isStory = list.discribe.includes("Stories");
-
-  return (
-    <div className={`tip__card ${isStory ? "story-card" : "gap"}`}>
-      {isStory && list.img && (
-        <img src={list.img} alt="Story Tip" className="tip__image" />
-      )}
-      <p className="topic">{list.discribe}</p>
-      <h3 className="tip__description">{list.header}</h3>
-      <p className="message">{list.message}</p>
-      <button className="read_btn">Read More</button>
     </div>
   );
 }
