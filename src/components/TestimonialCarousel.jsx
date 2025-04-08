@@ -162,14 +162,14 @@ const TestimonialCarousel = () => {
           <div className="absolute -top-16 right-0 flex space-x-4">
             <button
               onClick={goToPrevious}
-              className="btn btn-square text-black flex items-center justify-center shadow-lg hover:bg-gray-200 focus:outline-none transition-colors duration-300"
+              className="bg-gray-50 px-4 py-2 rounded-md shadow-5xl text-black flex items-center justify-center hover:bg-gray-200 hover:cursor-pointer focus:outline-none transition-colors duration-300"
               aria-label="Previous testimonials"
             >
               ❮
             </button>
             <button
               onClick={goToNext}
-              className="btn btn-square text-black flex items-center justify-center shadow-lg hover:bg-gray-200 focus:outline-none transition-colors duration-300"
+              className="bg-gray-50 px-4 py-2 rounded-md shadow-5xl text-black flex items-center justify-center hover:bg-gray-200 hover:cursor-pointer focus:outline-none transition-colors duration-300"
               aria-label="Next testimonials"
             >
               ❯

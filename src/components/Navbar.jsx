@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <>
       <div className="relative z-40">
-        <nav className="glass fixed w-screen">
+        <nav className="glass bg-black opacity-80 fixed w-screen">
           <div className="navbar align-element">
             <div className="navbar-start">
               {/* LOGO */}

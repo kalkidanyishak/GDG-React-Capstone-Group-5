@@ -5,3 +5,4 @@ export { default as AboutUs } from "./AboutUs";
 export { default as Package } from "./Package";
 export { default as SingleBlog } from "./SingleBlog";
 export { default as Error } from "./Error";
+export { default as Destinations } from "./Destinations";
