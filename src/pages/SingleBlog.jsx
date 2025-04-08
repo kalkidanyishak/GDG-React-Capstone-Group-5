@@ -1,4 +1,4 @@
-import blogHero from "../assets/blog-hero-bg.png";
+import blogHero from "../assets/images/blog-hero-bg.png";
 import { Hero } from "../components";
 import { Link } from "react-router-dom";
 

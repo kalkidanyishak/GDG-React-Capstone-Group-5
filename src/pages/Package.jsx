@@ -1,6 +1,7 @@
-import packageHero from "../assets/package-hero-bg.png";
+import packageHero from "../assets/images/package-hero-bg.png";
 import { Hero } from "../components";
 import { Link } from "react-router-dom";
+
 import "./package.css";
 import { useEffect, useState } from "react";
 
@@ -24,6 +25,7 @@ const img = [
     image: "images/image7.png",
   },
 ];
+
 const Package = () => {
   const [packages, setPackages] = useState([]);
   const [loading, setLoading] = useState(true);

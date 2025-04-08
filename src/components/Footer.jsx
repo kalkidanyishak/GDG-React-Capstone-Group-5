@@ -2,16 +2,18 @@ import { HiLocationMarker } from "react-icons/hi";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 
-import logo from "../assets/logo.png";
+import logo from "../assets/images/logo.png";
 import { Link } from "react-router-dom";
 import SocialLinks from "./SocialLinks";
+import Subscribe from "./Subscribe";
 
 const Footer = () => {
   return (
     <footer>
-      <div className="py-8 flex flex-col align-element justify-between items-center space-y-4 md:flex-row space-x-0 md:space-x-8 md:items-start">
+      <Subscribe />
+      <div className="py-8 flex flex-col align-element md:justify-around lg:justify-between items-center space-y-4 md:flex-row space-x-0 lg:space-x-8 md:items-start">
         {/* LOGO */}
-        <div className="hidden md:flex md:flex-col space-y-2 max-w-sm items-center md:items-start">
+        <div className="hidden lg:flex lg:flex-col space-y-2 max-w-sm items-center md:items-start">
           <img src={logo} alt="logo" className="w-40 h-auto" />
           <p className="text-gray-500">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
