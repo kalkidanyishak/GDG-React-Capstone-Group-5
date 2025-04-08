@@ -246,3 +246,4 @@ function Lists({ item, image }) {
 }
 
 export default Package;
+
