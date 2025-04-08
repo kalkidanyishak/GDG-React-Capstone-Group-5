@@ -16,9 +16,9 @@ const WhyUsCard = ({ icon, cardTitle, text }) => {
           </div>
         </div>
         <div className="card-actions justify-start">
-          <button className="btn text-black  lg:text-xl">
+          <button className="bg-gray-100 py-2 px-4 text-black  lg:text-xl">
             Learn more
-            <span>
+            <span className="px-2">
               <FaArrowRightLong className="inline" />
             </span>
           </button>

@@ -2,7 +2,7 @@ import { HiLocationMarker } from "react-icons/hi";
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/footer_logo.png";
 import { Link } from "react-router-dom";
 import SocialLinks from "./SocialLinks";
 import Subscribe from "./Subscribe";
