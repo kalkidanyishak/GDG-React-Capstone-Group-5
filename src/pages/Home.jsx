@@ -41,4 +41,5 @@ const Home = () => {
     </>
   );
 };
+// resolve merge error
 export default Home;
