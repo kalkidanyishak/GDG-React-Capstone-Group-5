@@ -9,4 +9,5 @@ const Home = () => {
     </Hero>
   );
 };
+// resolve merge error
 export default Home;
