@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 import { BiSolidQuoteLeft, BiRocket } from "react-icons/bi";
 import { RiTeamLine } from "react-icons/ri";
 import { BsGraphUp } from "react-icons/bs";
+import Statistics from "../components/statistics";
+import Gallary from "../components/Gallary";
 
 const AboutUs = () => {
   return (
     <>
+      {/* section 1 banner  */}
       <div>
         <Hero backgroundImage={aboutHero} className="items-center">
           <h1 className="text-white text-5xl font-bold mb-4">About Us</h1>
@@ -23,6 +26,7 @@ const AboutUs = () => {
           </div>
         </Hero>
       </div>
+      {/* section 2 vision and mision   */}
 
       <div className="container mx-auto px-1 py-12 ">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-34 ">
@@ -61,12 +65,15 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
+
+      {/* section 3 founder message  */}
+
       <div className="container mx-auto px-1 py-12 ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-34">
           <div>
             <img
               className="rounded-tl-[100px] rounded-br-[100px]"
-              src="./src/assets/traveler-man.png"
+              src="./src/assets/images/traveler-man.png"
               alt="traveler-man"
             />
           </div>
@@ -90,6 +97,13 @@ const AboutUs = () => {
             <h6>Founder Travasca</h6>
           </div>
         </div>
+      </div>
+      {/* section 4 statistics  */}
+      <div>
+        <Statistics />
+      </div>
+      <div>
+        <Gallary />
       </div>
     </>
   );
