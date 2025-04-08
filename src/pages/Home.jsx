@@ -7,23 +7,23 @@ import TestimonialCarousel from "../components/TestimonialCarousel";
 const Home = () => {
   return (
     <>
-      <Hero backgroundImage={heroImg} className="items-center md:items-start">
-        <div className="flex flex-col space-y-8 justify-center items-center md:mt-16 md:items-start md:ml-20 lg:mt-32">
-          <h1 className="text-white md:text-8xl text-4xl font-bold md:max-w-2xl">
-            Make in your journey
+      <Hero backgroundImage={heroImg} className="items-center lg:items-start">
+        <div className="flex flex-col space-y-4 md:space-y-8 justify-center items-center lg:mt-30 lg:items-start lg:ml-24">
+          <h1 className="text-white sm:text-6xl lg:text-[90px] text-5xl text-center md:text-left font-bold md:max-w-2xl">
+            Make in your journey.
           </h1>
-          <p className="text-white opacity-80 text-center md:text-left md:max-w-sm">
+          <p className="text-white font-medium max-w-sm opacity-80 text-[18px] text-center lg:text-left md:max-w-sm">
             Explore the world with what you love beautiful natural beauty.
           </p>
-          <div className="bg-white space-x-6 flex rounded-full px-4 py-2 justify-between items-center">
-            <select className="">
+          <div className="bg-white md:text-lg text-gray-500 font-medium md:tracking-wider space-x-2 md:space-x-6 lg:space-x-16 flex rounded-full md:px-6 px-4 py-2 justify-between items-center">
+            <select className="px-2">
               <option>Location</option>
             </select>
 
-            <select defaultValue="Pick a date" className="">
+            <select defaultValue="Pick a date" className="px-2">
               <option>Date</option>
             </select>
-            <select defaultValue="Pick a color" className="">
+            <select defaultValue="Pick a color" className="px-2">
               <option>Date</option>
             </select>
             <Button>Explore now</Button>
@@ -37,7 +37,7 @@ const Home = () => {
       <TravelCarousel />
       <WhyUs />
       <TourPartner />
-      <TestimonialCarousel/>
+      <TestimonialCarousel />
     </>
   );
 };

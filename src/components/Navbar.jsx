@@ -3,7 +3,6 @@ import { FaBarsStaggered } from "react-icons/fa6";
 import { NavLink } from "react-router-dom";
 import NavLinks from "./NavLinks";
 import navLogo from "../assets/images/logo.png";
-import Search from "./Search";
 
 const Navbar = () => {
   return (
@@ -34,13 +33,23 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="navbar-center hidden lg:flex">
+            <div className="navbar-center hidden lg:flex lg:items-center lg:mr-8">
               <ul className="menu menu-horizontal">
                 <NavLinks />
+                <div className="translate-y-1.5  px-2">
+                  <CiSearch className="text-2xl text-white" />
+                </div>
               </ul>
             </div>
-            <div className="navbar-end">
-              <Search />
+            <div className="lg:hidden navbar-end">
+              {/* LOGO */}
+              <NavLink to="/" className="mr-8">
+                <img
+                  src={navLogo}
+                  alt="Logo"
+                  className="w-40 h-auto transition-transform duration-300 ease-in-out hover:scale-105"
+                />
+              </NavLink>
             </div>
           </div>
         </nav>

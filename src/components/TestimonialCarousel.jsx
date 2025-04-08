@@ -1,58 +1,58 @@
 import React, { useState, useEffect } from "react";
 
-const TestimonialCarousel = () => {
-  // Sample testimonial data based on the image
-  const testimonials = [
-    {
-      id: 1,
-      name: "Sara Jay",
-      role: "Traveller",
-      image: "https://i.pravatar.cc/150?img=1",
-      rating: 5,
-      text: "Before we define any approach, we need to define the brands overall goal. We then need to dive.",
-    },
-    {
-      id: 2,
-      name: "Cristian Daniel",
-      role: "Traveller",
-      image: "https://i.pravatar.cc/150?img=2",
-      rating: 5,
-      text: "Before we define any approach, we need to define the brands overall goal. We then need to dive.",
-    },
-    {
-      id: 3,
-      name: "Kausar Hasan",
-      role: "Traveller",
-      image: "https://i.pravatar.cc/150?img=3",
-      rating: 5,
-      text: "Before we define any approach, we need to define the brands overall goal. We then need to dive.",
-    },
-    {
-      id: 4,
-      name: "John Doe",
-      role: "Traveller",
-      image: "https://i.pravatar.cc/150?img=4",
-      rating: 5,
-      text: "Before we define any approach, we need to define the brands overall goal. We then need to dive.",
-    },
-    {
-      id: 5,
-      name: "Emma Watson",
-      role: "Traveller",
-      image: "https://i.pravatar.cc/150?img=5",
-      rating: 4,
-      text: "Creating a strong visual identity helped our business stand out in a crowded market. The approach was methodical and effective.",
-    },
-    {
-      id: 6,
-      name: "Michael Chen",
-      role: "Traveller",
-      image: "https://i.pravatar.cc/150?img=6",
-      rating: 5,
-      text: "The branding strategy developed for our startup was instrumental in our early success. Highly recommended for any new business.",
-    },
-  ];
+// Sample testimonial data based on the image
+const testimonials = [
+  {
+    id: 1,
+    name: "Sara Jay",
+    role: "Traveller",
+    image: "https://i.pravatar.cc/150?img=1",
+    rating: 4,
+    text: "Before we define any approach, we need to define the brands overall goal. We then need to dive.",
+  },
+  {
+    id: 2,
+    name: "Cristian Daniel",
+    role: "Traveller",
+    image: "https://i.pravatar.cc/150?img=2",
+    rating: 5,
+    text: "Before we define any approach, we need to define the brands overall goal. We then need to dive.",
+  },
+  {
+    id: 3,
+    name: "Kausar Hasan",
+    role: "Traveller",
+    image: "https://i.pravatar.cc/150?img=3",
+    rating: 5,
+    text: "Before we define any approach, we need to define the brands overall goal. We then need to dive.",
+  },
+  {
+    id: 4,
+    name: "John Doe",
+    role: "Traveller",
+    image: "https://i.pravatar.cc/150?img=4",
+    rating: 5,
+    text: "Before we define any approach, we need to define the brands overall goal. We then need to dive.",
+  },
+  {
+    id: 5,
+    name: "Emma Watson",
+    role: "Traveller",
+    image: "https://i.pravatar.cc/150?img=5",
+    rating: 4,
+    text: "Creating a strong visual identity helped our business stand out in a crowded market. The approach was methodical and effective.",
+  },
+  {
+    id: 6,
+    name: "Michael Chen",
+    role: "Traveller",
+    image: "https://i.pravatar.cc/150?img=6",
+    rating: 3,
+    text: "The branding strategy developed for our startup was instrumental in our early success. Highly recommended for any new business.",
+  },
+];
 
+const TestimonialCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerPage =
     window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
@@ -117,11 +117,13 @@ const TestimonialCarousel = () => {
   return (
     <div className="py-12 px-4 md:px-8 relative">
       <div className="align-element">
-        <h3 className="text-4xl text-gray-500 font-semibold mb-2">
+        <h3 className="text-center md:text-left text-2xl md:text-4xl text-gray-500 font-semibold mb-2">
           TESTIMONIAL
         </h3>
-        <h2 className="text-4xl font-bold mb-4">What our client say</h2>
-        <p className="text-lg mb-12 max-w-sm text-gray-500">
+        <h2 className="text-center md:text-left text-3xl md:text-4xl font-bold mb-4">
+          What our client say
+        </h2>
+        <p className="text-center md:text-left text-md md:text-lg mb-12 max-w-sm text-gray-500">
           Create a visual identity for your company and a overall brand
         </p>
 
@@ -130,7 +132,7 @@ const TestimonialCarousel = () => {
             {getVisibleTestimonials().map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="bg-white py-8 text-black rounded-lg shadow-lg p-6 transition-all duration-300 transform hover:scale-105"
+                className="bg-white py-16 text-black rounded-lg shadow-lg p-6"
               >
                 <div className="relative flex flex-col items-center">
                   <img
@@ -160,43 +162,17 @@ const TestimonialCarousel = () => {
           <div className="absolute -top-16 right-0 flex space-x-4">
             <button
               onClick={goToPrevious}
-              className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:bg-gray-200 focus:outline-none transition-colors duration-300"
+              className="btn btn-square text-black flex items-center justify-center shadow-lg hover:bg-gray-200 focus:outline-none transition-colors duration-300"
               aria-label="Previous testimonials"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
+              ❮
             </button>
             <button
               onClick={goToNext}
-              className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center shadow-lg hover:bg-gray-200 focus:outline-none transition-colors duration-300"
+              className="btn btn-square text-black flex items-center justify-center shadow-lg hover:bg-gray-200 focus:outline-none transition-colors duration-300"
               aria-label="Next testimonials"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              ❯
             </button>
           </div>
         </div>

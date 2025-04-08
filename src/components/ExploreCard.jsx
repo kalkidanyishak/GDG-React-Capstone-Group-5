@@ -5,11 +5,7 @@ const ExploreCard = ({ isCenter, isLeft, isRight, item }) => {
     <div
       className={`
       absolute transition-all duration-500 ease-in-out 
-      ${
-        isCenter
-          ? "z-20 opacity-100 scale-100"
-          : "z-10 opacity-75 scale-85"
-      }
+      ${isCenter ? "z-20 scale-100" : "z-10 scale-85"}
       ${
         isLeft
           ? "-translate-x-[calc(100%-4rem)] md:-translate-x-[calc(100%-0.5rem)]"
@@ -40,17 +36,15 @@ const ExploreCard = ({ isCenter, isLeft, isRight, item }) => {
             <div className="absolute bottom-0 left-0 right-0 bg-white bg-opacity-90 p-4">
               <div className="flex justify-between items-center">
                 <div>
-                  <h3 className="text-xl font-bold text-gray-800">
+                  <h3 className="text-left md:text-xl font-bold text-gray-800">
                     {item.location}
                   </h3>
-                  <p className="text-sm text-gray-600 mt-1">
+                  <p className="text-left  text-xs md:text-sm text-gray-600 mt-1">
                     {item.description}
                   </p>
                 </div>
-                <div className="flex-shrink-0 bg-white rounded-full p-2 shadow-md">
-                  <div className="absolute -top-6 right-8 bg-white text-5xl px-2 py-2 rounded-full shadow-2xl">
-                    <CgQuote />
-                  </div>
+                <div className="absolute -top-6 right-8 bg-white text-5xl px-2 py-2 rounded-full shadow-2xl">
+                  <CgQuote />
                 </div>
               </div>
             </div>

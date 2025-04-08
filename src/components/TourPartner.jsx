@@ -7,9 +7,9 @@ import jakmaen from "../assets/svgs/jakmaen.svg";
 
 const TourPartner = () => {
   return (
-    <section className="flex flex-col space-y-4 items-center py-16">
+    <section className="lg:mt-50 flex flex-col space-y-4 items-center py-16">
       <SectionTitle className="text-center" text="Our tour partner" />
-      <p className="text-center text-2xl font-medium text-gray-500 max-w-2xl">
+      <p className="text-center text-2xl font-medium text-gray-500 max-w-sm md:max-w-2xl">
         There are many variation of passage of lorem ipsum available but the
         majority have suffered alteration
       </p>

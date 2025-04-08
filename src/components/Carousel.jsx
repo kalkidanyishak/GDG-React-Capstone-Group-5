@@ -1,16 +1,15 @@
+import whyUsBg from "../assets/images/whyus-bg.png";
+
 const Carousel = () => {
   return (
-    <div className="carousel w-full min-h-64">
+    <div className="carousel w-full min-h-64 md:min-h-[633px]">
       <div id="slide1" className="carousel-item relative w-full">
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-          className="w-full"
-        />
+        <img src={whyUsBg} className="w-full" />
         <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a href="#slide4" className="btn btn-circle">
+          <a href="#slide4" className="btn btn-square">
             ❮
           </a>
-          <a href="#slide2" className="btn btn-circle">
+          <a href="#slide2" className="btn btn-square">
             ❯
           </a>
         </div>
@@ -21,10 +20,10 @@ const Carousel = () => {
           className="w-full"
         />
         <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a href="#slide1" className="btn btn-circle">
+          <a href="#slide1" className="btn btn-square">
             ❮
           </a>
-          <a href="#slide3" className="btn btn-circle">
+          <a href="#slide3" className="btn btn-square">
             ❯
           </a>
         </div>
@@ -35,10 +34,10 @@ const Carousel = () => {
           className="w-full"
         />
         <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a href="#slide2" className="btn btn-circle">
+          <a href="#slide2" className="btn btn-square">
             ❮
           </a>
-          <a href="#slide4" className="btn btn-circle">
+          <a href="#slide4" className="btn btn-square">
             ❯
           </a>
         </div>
@@ -49,10 +48,10 @@ const Carousel = () => {
           className="w-full"
         />
         <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a href="#slide3" className="btn btn-circle">
+          <a href="#slide3" className="btn btn-square">
             ❮
           </a>
-          <a href="#slide1" className="btn btn-circle">
+          <a href="#slide1" className="btn btn-square">
             ❯
           </a>
         </div>
