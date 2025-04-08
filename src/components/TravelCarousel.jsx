@@ -94,7 +94,7 @@ const TravelCarousel = () => {
           {/* Navigation Buttons */}
           <button
             onClick={goToPrevious}
-            className="bg-gray-300 px-4 py-2 rounded-md absolute -top-4 -left-6 md:left-0 md:top-8 hover:cursor-pointer hover:bg-gray-200"
+            className="bg-gray-50 px-4 py-2 rounded-md shadow-5xl absolute -top-4 -left-6 md:left-0 md:top-8 hover:cursor-pointer hover:bg-gray-200"
             aria-label="Previous slide"
           >
             ❮
@@ -102,7 +102,7 @@ const TravelCarousel = () => {
 
           <button
             onClick={goToNext}
-            className="bg-gray-300 px-4 py-2 rounded-md shadow-2xl absolute -top-4 -right-6 md:right-0 md:top-8 hover:cursor-pointer hover:bg-gray-200"
+            className="bg-gray-50 px-4 py-2 rounded-md shadow-5xl absolute -top-4 -right-6 md:right-0 md:top-8 hover:cursor-pointer hover:bg-gray-200"
             aria-label="Next slide"
           >
             ❯

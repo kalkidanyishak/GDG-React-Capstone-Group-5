@@ -7,7 +7,10 @@ import {
   Home,
   Package,
   SingleBlog,
+  Destinations
 } from "./pages";
+
+import { loader as destinationsLoader } from "./pages/Destinations";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +37,11 @@ const router = createBrowserRouter([
       {
         path: "blog",
         element: <SingleBlog />,
+      },
+      {
+        path: "destinations",
+        element: <Destinations />,
+        loader: destinationsLoader,
       },
     ],
   },
