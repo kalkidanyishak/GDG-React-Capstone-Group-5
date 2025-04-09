@@ -6,3 +6,9 @@
     @apply mx-auto max-w-6xl  px-8;
   }
 }
+
+@layer components {
+  .slide-btn {
+    @apply text-2xl text-gray-600 -translate-y-1/2 z-30 bg-white rounded-lg px-2 py-1 shadow-lg transition-all duration-300;
+  }
+}

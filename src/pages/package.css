@@ -1,54 +1,72 @@
 .header {
   font-size: 30px;
   font-weight: 700;
-  margin: 20px;
+  margin: 5rem;
+  margin-top: 6rem;
+  margin-bottom: 0;
 }
 
 .para__btn {
   display: flex;
-  gap: 20px;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-bottom: 3rem;
 }
 
-.para__btn button {
+.btn {
   background-color: black;
   color: white;
-  padding: 10px;
-  border-radius: 0.5rem;
-  font-size: 14px;
+  width: 7.2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  font-size: 12px;
   align-items: center;
   cursor: pointer;
+  margin-right: 5rem;
 }
 
 .para {
-  width: 35rem;
+  width: 30rem;
+  font-size: 14px;
+  margin-left: 5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 7rem;
 }
 .packages__card {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  padding: 20px;
-  margin: 10px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .package__card {
   box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.2);
-  padding: 20px;
+  padding: 0px;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  border-radius: 0.5rem;
+  border-radius: 1rem;
+}
+.message {
+  font-size: 12px;
+  width: 50.5ch;
+  margin-left: 13px;
 }
 
 .country__price {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  margin: 10px;
+  margin: 13px;
 }
 
 .packages__image {
-  max-width: 20rem;
+  max-width: 22rem;
 }
 
 .stars {
@@ -57,22 +75,55 @@
 }
 
 .star-icon {
-  width: 20px;
+  width: 18px;
 }
 
 .booking__rating {
   display: flex;
-  gap: ;
   justify-content: space-between;
-  margin-top: 20px;
+  margin: 30px;
+  margin-left: 13px;
 }
 
 .booking__btn {
   background-color: black;
   color: white;
-  padding: 10px;
-  border-radius: 0.5rem;
+  height: 2rem;
+  width: 7rem;
+  border-radius: 1.5rem;
   font-size: 14px;
   align-items: center;
+  cursor: pointer;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-column-gap: 2.5rem;
+  margin: 1rem;
+}
+.stories {
+  grid-row: span 2;
+  margin-right: 4rem;
+  box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.2);
+  height: fit-content;
+
+}
+.perfect,
+.Tips {
+  box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+  margin-left: 4rem;
+  padding: 30px;
+}
+
+.tips_btn {
+  background-color: black;
+  color: white;
+  width: 7.2rem;
+  height: 2.5rem;
+  border-radius: 1.5rem;
+  font-size: 14px;
+  margin: 10px;
   cursor: pointer;
 }
