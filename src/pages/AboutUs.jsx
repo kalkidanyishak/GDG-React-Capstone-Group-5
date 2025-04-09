@@ -35,7 +35,7 @@ const AboutUs = () => {
               <RiTeamLine />
             </h2>
             <h2 className="text-3xl font-bold">Great team work</h2>
-            <p>
+            <p className="text-gray-500 px-3 py-1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Repellendus deserunt recusandae, cumque distinctio nulla aut culpa
               itaque corporis deleniti facere et.
@@ -46,7 +46,7 @@ const AboutUs = () => {
               <BiRocket />
             </h2>
             <h2 className="text-3xl font-bold">Vision</h2>
-            <p>
+            <p className="text-gray-500 px-3 py-1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Repellendus deserunt recusandae, cumque distinctio nulla aut culpa
               itaque corporis deleniti facere et.
@@ -57,7 +57,7 @@ const AboutUs = () => {
               <BsGraphUp />
             </h2>
             <h2 className="text-3xl font-bold">Our Mission</h2>
-            <p>
+            <p className="text-gray-500 px-3 py-1">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Repellendus deserunt recusandae, cumque distinctio nulla aut culpa
               itaque corporis deleniti facere et.
