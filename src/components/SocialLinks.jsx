@@ -7,18 +7,22 @@ const socialLinks = [
   {
     id: 1,
     url: "https://www.facebook.com",
-    icon: <FaFacebook className="text-2xl" />,
+    icon: <FaFacebook className="text-2xl duration-200 hover:text-gray-600" />,
   },
-  { id: 2, url: "https://x.com", icon: <FaTwitter className="text-2xl" /> },
+  {
+    id: 2,
+    url: "https://x.com",
+    icon: <FaTwitter className="text-2xl duration-200 hover:text-gray-600" />,
+  },
   {
     id: 3,
     url: "https://youtube.com",
-    icon: <FaYoutube className="text-2xl" />,
+    icon: <FaYoutube className="text-2xl duration-200 hover:text-gray-600" />,
   },
   {
     id: 4,
     url: "https://www.instagram.com",
-    icon: <FaInstagram className="text-2xl" />,
+    icon: <FaInstagram className="text-2xl duration-200 hover:text-gray-600" />,
   },
 ];
 
@@ -29,7 +33,7 @@ const SocialLinks = () => {
         const { id, url, icon } = link;
         return (
           <li key={id}>
-            <a href={url}>
+            <a href={url} target="_blank" rel="noopener noreferrer">
               {icon}
             </a>
           </li>

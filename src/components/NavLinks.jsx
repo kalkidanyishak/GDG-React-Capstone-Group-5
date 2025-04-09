@@ -16,7 +16,14 @@ const NavLinks = () => {
         const { id, url, text } = link;
         return (
           <li key={id}>
-            <NavLink to={url} className="capitalize text-white font-medium">
+            <NavLink
+              to={url}
+              className={({ isActive }) =>
+                isActive
+                  ? "capitalize text-white font-bold"
+                  : "capitalize text-white font-medium tracking-wider"
+              }
+            >
               {text}
             </NavLink>
           </li>
@@ -25,4 +32,5 @@ const NavLinks = () => {
     </>
   );
 };
+
 export default NavLinks;

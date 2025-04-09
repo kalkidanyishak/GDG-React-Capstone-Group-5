@@ -42,16 +42,28 @@ const Footer = () => {
         {/* QUICK LINK */}
         <div className="flex flex-col space-y-2 items-center md:items-start">
           <h4 className="font-bold text-lg mb-2">Quick Link</h4>
-          <Link to="/" className="text-gray-500">
+          <Link
+            to="/"
+            className="text-gray-500 duration-200 hover:text-gray-800 hover:font-medium"
+          >
             Home
           </Link>
-          <Link to="about" className="text-gray-500">
+          <Link
+            to="about"
+            className="text-gray-500 duration-200 hover:text-gray-800 hover:font-medium"
+          >
             About Us
           </Link>
-          <Link to="/" className="text-gray-500">
+          <Link
+            to="/"
+            className="text-gray-500 duration-200 hover:text-gray-800 hover:font-medium"
+          >
             Tours
           </Link>
-          <Link to="contact" className="text-gray-500">
+          <Link
+            to="contact"
+            className="text-gray-500 duration-200 hover:text-gray-800 hover:font-medium"
+          >
             Contact
           </Link>
         </div>
