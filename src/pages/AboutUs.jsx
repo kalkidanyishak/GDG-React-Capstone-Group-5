@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { BiSolidQuoteLeft, BiRocket } from "react-icons/bi";
 import { RiTeamLine } from "react-icons/ri";
 import { BsGraphUp } from "react-icons/bs";
-import Statistics from "../components/statistics";
+import Statistics from "../components/Statistics";
 import Gallary from "../components/Gallary";
 
 const AboutUs = () => {
