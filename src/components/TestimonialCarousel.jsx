@@ -128,33 +128,27 @@ const TestimonialCarousel = () => {
         </p>
 
         <div className="relative mt-24">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {getVisibleTestimonials().map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="bg-white py-16 text-black rounded-lg shadow-lg p-6"
+                className="relative shadow-lg py-4 px-6 flex flex-col rounded-xl items-center max-w-[300px] mx-auto"
               >
-                <div className="relative flex flex-col items-center">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="absolute -top-16 w-24 h-24 rounded-full mb-4 object-cover border-4 border-gray-200"
-                  />
-                  <h3 className="text-xl font-bold mt-16">
-                    {testimonial.name}
-                  </h3>
-                  <p className="text-gray-500 mb-4 text-lg">
-                    {testimonial.role}
-                  </p>
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="absolute -top-16 w-24 h-24 rounded-full object-cover border-4 border-gray-200"
+                />
+                <h3 className="text-xl font-bold mt-12">{testimonial.name}</h3>
+                <p className="text-gray-500 mb-4 text-lg">{testimonial.role}</p>
 
-                  <div className="flex mb-2 mt-8 self-start">
-                    {renderStars(testimonial.rating)}
-                  </div>
-
-                  <p className="text-left text-lg text-gray-500">
-                    {testimonial.text}
-                  </p>
+                <div className="flex mb-2 mt-8 self-start">
+                  {renderStars(testimonial.rating)}
                 </div>
+
+                <p className="text-left text-lg text-gray-500 mb-8">
+                  {testimonial.text}
+                </p>
               </div>
             ))}
           </div>

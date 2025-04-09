@@ -16,9 +16,9 @@ const WhyUsCard = ({ icon, cardTitle, text }) => {
           </div>
         </div>
         <div className="card-actions justify-start">
-          <button className="bg-gray-100 py-2 px-4 text-black  lg:text-xl">
+          <button className="group bg-gray-100 py-2 px-4 text-black hover:bg-gray-50 hover:cursor-pointer  lg:text-xl">
             Learn more
-            <span className="px-2">
+            <span className="px-2 group-hover:px-4">
               <FaArrowRightLong className="inline" />
             </span>
           </button>
