@@ -1,10 +1,18 @@
 import blogHero from "../assets/images/blog-hero-bg.png";
 import { Hero } from "../components";
 import { Link } from "react-router-dom";
+import image1blog from "../assets/images/image1blog.png"; 
+import coupletravelers from "../assets/images/coupletravelers.png"; 
+import post1 from "../assets/images/post1.png"; 
+import post2 from "../assets/images/post2.png";
+import post3 from "../assets/images/post3.png";
+
+// Import icons (replace with actual paths to icons or use a library like react-icons)
+import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa"; 
 
 const SingleBlog = () => {
   return (
-    <div className="pt-24">
+    <div className="pt-12"> {/* Adjusted padding here */}
       <Hero backgroundImage={blogHero} className="items-center">
         <h1 className="text-white text-5xl font-bold mb-4 text-center max-w-lg">
           Travel Stories For Now and the Future
@@ -16,10 +24,11 @@ const SingleBlog = () => {
         <div className="lg:w-2/3 space-y-12">
           <div>
             <img
-              src="https://via.placeholder.com/600x400"
-              alt="Traveler"
-              className="rounded-lg mb-4 w-full object-cover"
+              src={image1blog}
+              alt="Explore Destination"
+              className="rounded-lg mb-4 object-cover w-[600px] h-[400px]"
             />
+
             <p className="text-gray-600 mb-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...
             </p>
@@ -31,16 +40,22 @@ const SingleBlog = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit...
             </p>
             <img
-              src="https://via.placeholder.com/600x400"
+              src={coupletravelers}
               alt="Couple Travelers"
-              className="rounded-lg mb-4 w-full object-cover"
+              className="rounded-lg mb-4 object-cover w-[600px] h-[400px]"
             />
+
             <p className="text-gray-600">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit...
             </p>
-            <div className="text-sm text-gray-500 mt-6 flex justify-between">
+            <div className="text-sm text-gray-500 mt-6 flex justify-between items-center">
               <span>Tags: Destination, Travel</span>
-              <span>Share This</span>
+              <span className="flex items-center space-x-3">
+                <span>Share This</span>
+                <FaFacebookF className="text-blue-600 cursor-pointer hover:text-blue-800" />
+                <FaLinkedinIn className="text-blue-600 cursor-pointer hover:text-blue-800" />
+                <FaTwitter className="text-blue-500 cursor-pointer hover:text-blue-700" />
+              </span>
             </div>
           </div>
 
@@ -131,12 +146,16 @@ const SingleBlog = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">Recent Post</h3>
             <ul className="space-y-3">
-              {[1, 2, 3].map((item, idx) => (
+              {[ 
+                { img: post1, title: "Exploring the Mountains", date: "14 Dec 2022" },
+                { img: post2, title: "A Journey Through Time", date: "21 Jan 2023" },
+                { img: post3, title: "Sunsets & Ocean Breeze", date: "03 Mar 2023" }
+              ].map((post, idx) => (
                 <li key={idx} className="flex items-start gap-3">
-                  <img src="https://via.placeholder.com/80" alt="Post" className="w-20 h-20 rounded object-cover" />
+                  <img src={post.img} alt={`Post ${idx + 1}`} className="w-20 h-20 rounded object-cover" />
                   <div>
-                    <p className="text-sm font-semibold">Sample Blog Post Title</p>
-                    <span className="text-xs text-gray-500">14 Dec 2022</span>
+                    <p className="text-sm font-semibold">{post.title}</p>
+                    <span className="text-xs text-gray-500">{post.date}</span>
                   </div>
                 </li>
               ))}
@@ -161,8 +180,6 @@ const SingleBlog = () => {
           </div>
         </div>
       </main>
-
-      {/* 👉 You can now add your subscribe bar/footer component below here */}
     </div>
   );
 };
