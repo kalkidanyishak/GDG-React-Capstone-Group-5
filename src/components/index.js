@@ -7,3 +7,7 @@ export { default as WhyUs } from "./WhyUs";
 export { default as Explore } from "./Explore";
 export { default as Loading } from "./Loading";
 export { default as PopularDestinations } from "./PopularDestinations ";
+export { default as TravelCarousel } from "./TravelCarousel";
+export { default as SelectInput } from "./SelectInput";
+export { default as TestimonialCarousel } from "./TestimonialCarousel";
+export { default as DestinationDetail } from "./DestinationDetail";

@@ -1,8 +1,10 @@
 import { CgQuote } from "react-icons/cg";
+import { Link } from "react-router-dom";
 
 const ExploreCard = ({ isCenter, isLeft, isRight, item }) => {
   return (
-    <div
+    <Link
+      to={`destinations/${item.id}`}
       className={`
       absolute transition-all duration-500 ease-in-out 
       ${isCenter ? "z-20 scale-100" : "z-10 scale-85"}
@@ -27,8 +29,8 @@ const ExploreCard = ({ isCenter, isLeft, isRight, item }) => {
       >
         <div className="relative h-64 md:h-80">
           <img
-            src={item.image}
-            alt={item.location}
+            src={item.imageUrl}
+            alt={item.name}
             className="w-full h-full object-cover"
           />
 
@@ -37,10 +39,10 @@ const ExploreCard = ({ isCenter, isLeft, isRight, item }) => {
               <div className="flex justify-between items-center">
                 <div>
                   <h3 className="text-left md:text-xl font-bold text-gray-800">
-                    {item.location}
+                    {item.name}
                   </h3>
                   <p className="text-left  text-xs md:text-sm text-gray-600 mt-1">
-                    {item.description}
+                    {item.shortDescription}
                   </p>
                 </div>
                 <div className="absolute -top-6 right-8 bg-white text-5xl px-2 py-2 rounded-full shadow-2xl">
@@ -51,7 +53,7 @@ const ExploreCard = ({ isCenter, isLeft, isRight, item }) => {
           )}
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 export default ExploreCard;

@@ -1,51 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { CgQuote } from "react-icons/cg";
-
-import explore_1 from "../assets/images/explore-img-1.png";
-import explore_2 from "../assets/images/explore-img-2.png";
-import explore_3 from "../assets/images/explore-img-3.png";
+import { useLoaderData } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import ExploreCard from "./ExploreCard";
 
-const destinations = [
-  {
-    id: 1,
-    location: "Bali, Indonesia",
-    description:
-      "Bali is a beautiful tourist spot and is visited by many travelers.",
-    image: explore_1,
-  },
-  {
-    id: 2,
-    location: "New York City, USA",
-    description:
-      "The Big Apple offers iconic landmarks, diverse culture, and endless entertainment.",
-    image: explore_2,
-  },
-  {
-    id: 3,
-    location: "Santorini, Greece",
-    description:
-      "Famous for stunning white architecture and breathtaking Mediterranean views.",
-    image: explore_3,
-  },
-  {
-    id: 4,
-    location: "Tokyo, Japan",
-    description:
-      "Ultra-modern city with a perfect blend of traditional culture and futuristic technology.",
-    image: explore_1,
-  },
-  {
-    id: 5,
-    location: "Paris, France",
-    description:
-      "The city of love known for its art, cuisine, and iconic architecture.",
-    image: explore_2,
-  },
-  // Add more destinations as needed
-];
+export const loader = async () => {
+  const response = await axios.get(
+    "https://67f8c4c62466325443edb74b.mockapi.io/destinations"
+  );
+  const destinations = response.data;
+  return destinations;
+};
 
 const TravelCarousel = () => {
+  const destinations = useLoaderData();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleItems, setVisibleItems] = useState([]);
 

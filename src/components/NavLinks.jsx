@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { FaAngleDown } from "react-icons/fa";
 
 const links = [
   { id: 1, url: "/", text: "home" },
@@ -24,7 +25,7 @@ const NavLinks = () => {
                   : "capitalize text-white font-medium tracking-wider"
               }
             >
-              {text}
+              {text} {id !== 1 ? <FaAngleDown /> : ""}
             </NavLink>
           </li>
         );
