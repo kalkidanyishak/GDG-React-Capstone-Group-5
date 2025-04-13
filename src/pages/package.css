@@ -15,9 +15,9 @@
 .btn {
   background-color: black;
   color: white;
-  width: 7.2rem;
-  height: 2rem;
-  border-radius: 1rem;
+  width: 9rem;
+  height: 2.5rem;
+  border-radius: 1.5rem;
   font-size: 12px;
   align-items: center;
   cursor: pointer;
@@ -32,9 +32,7 @@
 
 .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-self: center;
   margin-bottom: 7rem;
 }
 .packages__card {
@@ -42,7 +40,6 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   justify-content: center;
-  align-items: center;
 }
 
 .package__card {
@@ -65,9 +62,9 @@
   margin: 13px;
 }
 
-.packages__image {
-  max-width: 22rem;
-}
+/* .packages__image {
+ 
+} */
 
 .stars {
   display: flex;
@@ -88,12 +85,14 @@
 .booking__btn {
   background-color: black;
   color: white;
-  height: 2rem;
-  width: 7rem;
+  height: 2.5rem;
+  width: 8rem;
   border-radius: 1.5rem;
   font-size: 14px;
   align-items: center;
   cursor: pointer;
+  
+  
 }
 
 .box {
@@ -126,4 +125,73 @@
   font-size: 14px;
   margin: 10px;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 24px;
+    margin: 3rem 1rem 0 3rem;
+  }
+
+  .para__btn {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 2rem;
+    gap: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 1rem;
+    justify-content: center;
+  }
+
+  .para {
+    width: 100%;
+    font-size: 14px;
+    margin: 0 1rem;
+  }
+  .packages__card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 0 1rem;
+  }
+
+  .message {
+    width: 100%;
+    margin-left: 1rem;
+  }
+
+
+  .booking__rating {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 1rem;
+  }
+
+  .booking__btn {
+  margin-top: 1rem;
+  width: 100%;
+  }
+
+  .box {
+    display: block;
+    margin: 1rem;
+  }
+
+  .stories {
+    margin: 1rem;
+  }
+
+  .perfect,
+  .Tips {
+    margin: 1rem;
+    padding: 20px;
+  }
+
+  .tips_btn {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
 }
