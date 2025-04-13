@@ -25,7 +25,12 @@ const NavLinks = () => {
                   : "capitalize text-white font-medium tracking-wider"
               }
             >
-              {text} {id !== 1 ? <FaAngleDown /> : ""}
+              {text}
+              {id !== 1 && (
+                <span className="hidden md:inline">
+                  <FaAngleDown />
+                </span>
+              )}
             </NavLink>
           </li>
         );
