@@ -1,6 +1,5 @@
 import { Form } from "react-router-dom";
 import subscribe from "../assets/images/bg-subscribe.png";
-import Button from "./Button";
 import axios from "axios";
 import { toast } from "react-toastify";
 
@@ -54,7 +53,12 @@ const Subscribe = () => {
             type="text"
             placeholder="Type your email here"
           />
-          <Button type="submit">Subscribe</Button>
+          <button
+            className="text-sm px-4 py-3 font-semibold text-white bg-black rounded-full duration-200 hover:bg-black/80 hover:cursor-pointer focus:outline-none"
+            type="submit"
+          >
+            Subscribe
+          </button>
         </Form>
       </div>
     </div>
