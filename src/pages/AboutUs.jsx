@@ -6,6 +6,7 @@ import { RiTeamLine } from "react-icons/ri";
 import { BsGraphUp } from "react-icons/bs";
 import Statistics from "../components/Statistics";
 import Gallary from "../components/Gallary";
+import travelerMan from "../assets/images/traveler-man.png";
 
 const AboutUs = () => {
   return (
@@ -28,14 +29,14 @@ const AboutUs = () => {
       </div>
       {/* section 2 vision and mision   */}
 
-      <div className="container mx-auto px-1 py-12 ">
+      <div className="container mx-auto px-1 py-10 ">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-34 ">
           <div className="flex flex-col justify-center items-center text-center">
             <h2 className="text-6xl font-bold">
               <RiTeamLine />
             </h2>
             <h2 className="text-3xl font-bold">Great team work</h2>
-            <p>
+            <p className="text-gray-500 px-3">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Repellendus deserunt recusandae, cumque distinctio nulla aut culpa
               itaque corporis deleniti facere et.
@@ -46,7 +47,7 @@ const AboutUs = () => {
               <BiRocket />
             </h2>
             <h2 className="text-3xl font-bold">Vision</h2>
-            <p>
+            <p className="text-gray-500 px-3 ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Repellendus deserunt recusandae, cumque distinctio nulla aut culpa
               itaque corporis deleniti facere et.
@@ -57,7 +58,7 @@ const AboutUs = () => {
               <BsGraphUp />
             </h2>
             <h2 className="text-3xl font-bold">Our Mission</h2>
-            <p>
+            <p className="text-gray-500 px-3 ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Repellendus deserunt recusandae, cumque distinctio nulla aut culpa
               itaque corporis deleniti facere et.
@@ -68,12 +69,12 @@ const AboutUs = () => {
 
       {/* section 3 founder message  */}
 
-      <div className="container mx-auto px-1 py-12 ">
+      <div className="container mx-auto px-1 ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-34">
           <div>
             <img
               className="rounded-tl-[100px] rounded-br-[100px]"
-              src="./src/assets/images/traveler-man.png"
+              src={travelerMan}
               alt="traveler-man"
             />
           </div>

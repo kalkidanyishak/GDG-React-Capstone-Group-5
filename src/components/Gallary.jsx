@@ -25,7 +25,7 @@ function Gallary() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* in gallery text section */}
         <div className="text-center mb-12">
-          <p className="text-sm text-black-600 font-semibold tracking-wide">
+          <p className="text-lg text-gray-500  font-semibold tracking-wide">
             Gallery
           </p>
           <h2 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
