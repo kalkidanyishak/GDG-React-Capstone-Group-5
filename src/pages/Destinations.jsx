@@ -29,7 +29,9 @@ const Destinations = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/destinations">Destination</Link>
+            <Link to="./pages/Destinations" className="hover:text-blue-600 transition">
+      Destination
+    </Link>
             </li>
           </ul>
         </div>
