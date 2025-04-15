@@ -6,3 +6,5 @@ export { default as Package } from "./Package";
 export { default as SingleBlog } from "./SingleBlog";
 export { default as Error } from "./Error";
 export { default as Destinations } from "./Destinations";
+export { default as SingleDestination } from "./SingleDestination";
+export { default as Booking } from "./Booking";

@@ -140,7 +140,6 @@ const Package = () => {
             <img
               src="images/image9.png"
               alt=""
-              style={{ width: "50rem", height: "33rem", objectFit: "cover" }}
             />
             <p
               style={{

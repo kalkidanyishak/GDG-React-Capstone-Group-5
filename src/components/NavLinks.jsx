@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import { FaAngleDown } from "react-icons/fa";
 
 const links = [
   { id: 1, url: "/", text: "home" },
@@ -25,6 +26,11 @@ const NavLinks = () => {
               }
             >
               {text}
+              {id !== 1 && (
+                <span className="hidden md:inline">
+                  <FaAngleDown />
+                </span>
+              )}
             </NavLink>
           </li>
         );
