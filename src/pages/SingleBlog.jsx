@@ -8,6 +8,8 @@ import post2 from "../assets/images/post2.png";
 import post3 from "../assets/images/post3.png";
 import React from 'react';
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa"; 
+import { toast } from "react-toastify";
+
 
 const SingleBlog = () => {
   const [comments, setComments] = React.useState([]);
